@@ -2,7 +2,6 @@ export class Ship {
     constructor(longitud) {
         this.longitude = longitud;
         this.impact = 0;
-        this.sunk = false;
     }
 
     hit() {
@@ -12,10 +11,9 @@ export class Ship {
 
     isSunk() {
         if (this.impact === this.longitude) {
-            this.sunk = true;
+            return true;
         } else {
-            this.sunk = false;
+            return false;
         }
-        return this.sunk;
     }
 }
