@@ -10,7 +10,7 @@ export class Ship {
     }
 
     isSunk() {
-        if (this.impact === this.longitude) {
+        if (this.impact >= this.longitude) {
             return true;
         } else {
             return false;
